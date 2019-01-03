@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('it is working');
+    res.json('it is working');
 })
 
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
@@ -43,6 +43,6 @@ app.put('/image', (req, res) => {image.handleImage(req, res, db)})
 app.post('/imageUrl', (req, res) => {image.apiCall(req, res)})
 
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server running on port ${process.env.PORT}`);
+app.listen(3000, () => {
+    console.log('Server running in port 3000');
 });
