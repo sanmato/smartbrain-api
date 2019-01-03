@@ -44,5 +44,5 @@ app.post('/imageUrl', (req, res) => {image.apiCall(req, res)})
 
 
 app.listen(3000, () => {
-    console.log('Server running in port 3000');
+    console.log('Server running in port');
 });
